@@ -22,7 +22,7 @@ set wildmode=list:longest,full  " Complete till longest string
 set number
 set hlsearch
 set incsearch
-
+set backupcopy=yes
 "let NERDTreeShowBookmarks = 1 " Show bookmark
 "autocmd VimEnter * NERDTree " Enable NERDTree on startup
 
