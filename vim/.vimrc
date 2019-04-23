@@ -32,3 +32,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 set directory=$HOME/.vim/swap//
 au BufNewFile,BufRead *.ejs set filetype=html
+set laststatus=2
+
+" Markdown Preview
+let vim_markdown_preview_github=1
