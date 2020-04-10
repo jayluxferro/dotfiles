@@ -15,24 +15,18 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'mattn/emmet-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'w0rp/ale'
 Plugin 'prettier/prettier'
-Plugin 'skywind3000/asyncrun.vim'
-Plugin 'moll/vim-node'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'crusoexia/vim-javascript-lib'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'djoshea/vim-autoread'
 Plugin 'vim-scripts/vim-auto-save'
-Plugin 'jvanja/vim-bootstrap4-snippets'
 Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'ycm-core/YouCompleteMe'
+Plugin 'joshdick/onedark.vim'
+Plugin 'mhartington/oceanic-next'
+Plugin 'sheerun/vim-polyglot'
+"Plugin 'ycm-core/YouCompleteMe'
 " end of plugins
 call vundle#end()            " required
 
@@ -53,6 +47,21 @@ set backspace=2
 "colorscheme spacegray
 "colorscheme xcode-vim
 "colorscheme nova-vim
+"colorscheme onedark
+
+" Theme
+ syntax enable
+" for vim 7
+ set t_Co=256
+
+" for vim 8
+ if (has("termguicolors"))
+  set termguicolors
+ endif
+let g:airline_theme='oceanicnext'
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 0
+colorscheme OceanicNext
 
 packloadall " Loading all plugins
 silent! helptags ALL " Load help files for all plugins
@@ -69,6 +78,7 @@ set backupcopy=yes
 "autocmd VimEnter * NERDTree " Enable NERDTree on startup
 
 noremap <F3> :Autoformat<CR>
+noremap <F2> :nohl<CR>
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:syntastic_javascript_checkers = ['eslint']
 
@@ -90,10 +100,3 @@ noremap <Leader>P "+p
 
 " Javascript vim
 let g:javascript_plugin_jsdoc = 1
-
-let g:user_emmet_leader_key='<Tab>'
-let g:user_emmet_settings = {
-  \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-  \}
