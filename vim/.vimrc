@@ -26,7 +26,7 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'joshdick/onedark.vim'
 Plugin 'mhartington/oceanic-next'
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'ycm-core/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 " end of plugins
 call vundle#end()            " required
 
