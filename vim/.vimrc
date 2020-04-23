@@ -42,6 +42,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set backspace=2
+set encoding=utf-8
 
 "colorscheme murphy
 "colorscheme spacegray
